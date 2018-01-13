@@ -5,7 +5,7 @@ class WiFiInterfaceClass {
 public:
   WiFiInterfaceClass(void);
 
-  void connect(String APName, std::function<void()> requestUserFn = nullptr, std::function<void()> doneUserFn = nullptr);
+  void connect(char* APName, std::function<void()> requestUserFn = nullptr, std::function<void()> doneUserFn = nullptr);
 
 protected:
   String getNetworkString();

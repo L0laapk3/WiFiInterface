@@ -46,7 +46,7 @@ String WiFiInterfaceClass::getNetworkString() {
 
 
 
-void WiFiInterfaceClass::connect(String APName, std::function<void()> requestUserFn, std::function<void()> doneUserFn) {
+void WiFiInterfaceClass::connect(char* APName, std::function<void()> requestUserFn, std::function<void()> doneUserFn) {
   bool changed = false;
 
   ESP8266WebServer webServer(80);
@@ -150,7 +150,7 @@ void WiFiInterfaceClass::connect(String APName, std::function<void()> requestUse
         webServer.onNotFound([&]() {
           webServer.send(200, "text/html", ""
                          "<!DOCTYPE html><html><head>"
-                         "<title>" + APName + "</title>"
+                         "<title>" + String(APName) + "</title>"
                          "<meta name='apple-mobile-web-app-capable' content='yes' />"
                          "<meta name='viewport' content='minimal-ui, width=device-width, height=device-height, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no' />"
                          "<body onbeforeunload='document.getElementById(\"loader\").style.display=\"block\"'><style>*{margin:0}a{background:#f5f5f5;margin:10px 20px;display:block;padding:10px 30px;border-radius:10px;color:#000;text-decoration:none}a:first-of-type{font-weight:bold;width:auto;display:inline-block;float:right}h2{position:relative;left:40px;top:17px;margin-bottom:31px;width:0;white-space:nowrap}.overlay{position:fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.25);top:0;left:0}.overlay:before{width:104px;height:104px;background-color:rgba(0,0,0,0.5);content:"";position:absolute;border-radius:30px;left:calc(50% - 52px);top:calc(50% - 52px)}#spinner{position:absolute;left:calc(50% - 26px);top:calc(50% - 26px)}</style><script type='text/javascript'>"

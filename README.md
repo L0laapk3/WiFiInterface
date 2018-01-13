@@ -1,4 +1,4 @@
-This library for esp8266/etc connects to the last known network, or lets the user connect to an AP to select a new network. 
+This library for esp8266 connects to the last known network, or lets the user connect to an AP to select a new network. 
 
 Usage:
 ```
