@@ -5,7 +5,7 @@ Usage:
 WiFiInterface.connect(String APName, function requestUserFn, function doneUserFn);
 ```
 
-`requestUserFn` Is the name of the Access Point that will be created.
+`APName` Is the name of the Access Point that will be created.
 
 `requestUserFn` Will be called if the user needs to connect to the AP to complete the WiFi connection process.
 `doneUserFn` Will be called if the user succesfully logged in to a new WiFi network.
