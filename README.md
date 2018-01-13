@@ -2,7 +2,7 @@ This library for esp8266 connects to the last known network, or lets the user co
 
 Usage:
 ```
-WiFiInterface.connect(String APName, function requestUserFn, function doneUserFn);
+WiFiInterface.connect(char* APName, function requestUserFn, function doneUserFn);
 ```
 
 `APName` Is the name of the Access Point that will be created.
