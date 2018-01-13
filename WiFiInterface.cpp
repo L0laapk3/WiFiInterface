@@ -83,8 +83,6 @@ void WiFiInterfaceClass::connect(char* APName, std::function<void()> requestUser
     Serial.printf(" %u.%u.%u.%u", gateway[0], gateway[1], gateway[2], gateway[3]);
     Serial.printf(" %u.%u.%u.%u\n", subnet[0], subnet[1], subnet[2], subnet[3]);
 
-    ssid[0] = 'k';
-
     long start = millis();
     //WiFi.begin(ssid, pwd, ch, bssid);
     //WiFi.config(IPAddress(192, 168, 10, 15), IPAddress(192, 168, 10, 1), IPAddress(255, 255, 255, 0));
